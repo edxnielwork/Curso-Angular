@@ -7,4 +7,4 @@
 import { Avengers  } from './class/avengers.class';
 
 const spiderman = new Avengers('Daniel', 'Valencia', 17);
-spiderman.mostrar();
+// spiderman.mostrar();

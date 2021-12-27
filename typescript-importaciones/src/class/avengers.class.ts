@@ -1,5 +1,10 @@
 
+function imprimirConsola( constructorClase: Function){
+    console.log(constructorClase);
+}
 
+
+@imprimirConsola
 export class Avengers{
     constructor(
         public nombre: string,

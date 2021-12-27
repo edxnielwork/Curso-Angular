@@ -22,7 +22,6 @@
     enviarMision( deadpool );
     regresarAlCuartel( deadpool );
 
-
 })();
 
  
