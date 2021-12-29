@@ -1,1 +1,30 @@
-<h1>CUERPO PRINCIPAL</h1>
+<div class="row ">
+  
+    <div class="col">
+      <h1 class="text-center">USO DE ngIf</h1>
+      <hr>
+        <div *ngIf="mostrar" class="card text-white bg-primary mb-3" style="max-width: 100%;">
+            <div class="card-header text-center">LA MEJOR FRASE DE MARVEL</div>
+            <div class="card-body">
+              <h5 class="card-title"> {{frase.autor}}</h5>
+              <p class="card-text"> {{frase.mensaje}}</p>
+            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <button (click)="mostrar=!mostrar" class="btn btn-primary" type="button">MOSTRAR / OCULTAR</button>
+           
+          </div>
+      </div>
+
+    <div class="col">
+      <h1 class="text-center">USO DE ngFor</h1>
+      <hr>
+        <ul class="list-group">
+            <li *ngFor="let personaje of personajes; let i = index" class="list-group-item">{{i+1}}) {{personaje}}</li>
+           
+          </ul>
+    </div>
+
+   
+    
+</div>>
