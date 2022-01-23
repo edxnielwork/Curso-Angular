@@ -1,0 +1,10 @@
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="https://yt3.ggpht.com/ytc/AKedOLT-rNTDpUMzO8oxJdgynKt_xSVRDXv9-BvVrG4A=s900-c-k-c0x00ffffff-no-rj" width="30" height="30" class="d-inline-block align-top" alt=""> EDXNIEL WORK
+    </a>
+
+    <a class="navbar-brand" href="#" *ngIf="userLogged|async as user">
+        <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}" width="30" height="30" class="d-inline-block align-top" alt=""> {{user.displayName}}
+    </a>
+</nav>
