@@ -1,0 +1,21 @@
+<!-- Image and text -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="https://yt3.ggpht.com/ytc/AKedOLT-rNTDpUMzO8oxJdgynKt_xSVRDXv9-BvVrG4A=s900-c-k-c0x00ffffff-no-rj" width="30" height="30" class="d-inline-block align-top" alt=""> EDXNIEL WORK
+    </a>
+
+
+    <div ngbDropdown class="d-inline-block" *ngIf="userLogged|async as user; else btnEnter">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}" width="30" height="30" class="d-inline-block align-top" alt=""> {{user.displayName}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Profile</button>
+            <button ngbDropdownItem (click)="logout()">Exist</button>
+        </div>
+    </div>
+
+    <ng-template #btnEnter>
+        <button class="btn btn-outline-primary" routerLink="/login">Get In</button>
+    </ng-template>
+</nav>

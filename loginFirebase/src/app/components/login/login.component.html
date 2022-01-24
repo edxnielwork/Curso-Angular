@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            <b>LOGIN</b>
+        </div>
+        <div class="card-body">
+
+            <label style="float: left">Email</label>
+            <input class="form-control m-2" type="email" placeholder="Add the email" [(ngModel)]="usuario.email">
+            <label style="float: left">Password</label>
+
+            <input class="form-control m-2" type="password" placeholder="Add the password" [(ngModel)]="usuario.password">
+            <button class="btn btn-primary btn-block m-2" (click)="Send()">Send</button>
+            <button class="btn btn-primary btn-block m-2" (click)="SendGoogle()">SendGoogle</button>
+
+            <label>You do not have an account? <a routerLink="/register">Sign Up</a></label>
+            <!-- <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+        </div>
+        <!-- <div class="card-footer text-muted">            2 days ago      </div> -->
+
+    </div>
+</div>
