@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
     const { email, password } = this.usuario;
     this.authService.loginWithGoogle(email, password).then(res => {
       console.log("Registed:",res);
+    
     })
   }
 
@@ -42,8 +43,11 @@ export class LoginComponent implements OnInit {
     this.authService.logout();
   }
 
-
+  userLogged:any;
   ngOnInit(): void {
+    this.authService.getUserLogged().subscribe(usuario=>{
+      this.userLogged = usuario;
+    });
   }
 
 }

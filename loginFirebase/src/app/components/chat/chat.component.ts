@@ -7,46 +7,46 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
+  ViewChat=false;
   userLogged:any;
   newMesseger : string = "";
-  messegers:any=[
-    {
-      id:"id",
-      texto:"Hola como estas"
-    }, {
-      id:"id",
-      texto:" como estas"
-    }, 
-    
-    {
-      id:"id",
-      texto:"Hola como "
-    }, 
-    
-    {
-      id:"id",
-      texto:"Hola  estas"
-    }, 
-    
-    {
-      id:"id",
-      texto:" comowteferfttttttttttttttttttttttttttttttttttt "
-    },
-  ];
+  messegers:any=[];
   constructor(private authService: AuthService) { 
 
   }
 
   ngOnInit(): void {
     this.authService.getUserLogged().subscribe(usuario=>{
-      this.userLogged =usuario;
+      this.userLogged = usuario;
     });
   }
 
   sendMessager(){
-    console.log(this.newMesseger);
+    if(this.newMesseger == "")return;
+
+      console.log(this.newMesseger);
+      let messeger ={
+        id: this.userLogged.uid,
+        text: this.newMesseger
+      }
+    
+  
+    this.messegers.push(messeger);
     this.newMesseger="";
+
+    setTimeout(() =>{
+      this.scrollToTheLastElementByClassName();
+    }, 30);
+    
   }
+  
+  scrollToTheLastElementByClassName(){
+    let elements=document.getElementsByClassName('msj');
+    let ultimo:any=elements[(elements.length-1)];
+    let toppos = ultimo.offsetTop;
 
-
+    //@ts-ignore
+    document.getElementById('containerMessage')?.scrollTop = toppos;
+  }
+    
 }

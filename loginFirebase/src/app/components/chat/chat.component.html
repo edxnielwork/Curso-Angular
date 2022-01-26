@@ -1,13 +1,19 @@
-<div class="card text-center cardContainer" *ngIf="userLogged">
+<div *ngIf="userLogged && !ViewChat" class="chatIconContainer" (click)="ViewChat=true">
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561226.png" class="chatIcon" chatIcon alt="chat Icon">
+</div>
+
+<div class="card text-center cardContainer" *ngIf="userLogged && ViewChat">
+
+
     <div class="card-header">
-        Chat Edxniel Work
+        Chat
+        <div class="closeIcon" (click)="ViewChat=false"> x </div>
     </div>
     <div class="card-body">
-        <div>
-            <!--    <p *ngFor="let messeger of messegers" class="received">
-              {{messeger.texto}}
-            -->
-            <p *ngFor="let messeger of messegers" class="received" [ngClass]="(userLogged.uid==messeger.id)?'sended' : 'received'">
+        <div id="containerMessage" class="containerMessage h-100">
+            <!--       <p *ngFor="let messeger of messegers" class="received">                    {{messeger.texto}}    -->
+            <p *ngFor="let messeger of messegers" class="msj p-2" [ngClass]="(userLogged.uid==messeger.id)?'sended' : 'received'">
+                {{messeger.text}}
             </p>
         </div>
     </div>

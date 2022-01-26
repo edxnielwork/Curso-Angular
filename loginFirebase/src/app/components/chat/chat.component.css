@@ -2,8 +2,8 @@
     width: 300px;
     height: 500px;
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
     border-radius: 20px;
 }
 
@@ -16,6 +16,7 @@
 }
 
 .card-body {
+    padding: 0.5rem;
     background-image: url('https://www.todofondos.net/wp-content/uploads/fondo-de-pantalla-de-whatsapp-descarga-gratuita-486x1024.jpg');
 }
 
@@ -53,4 +54,40 @@
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     border-radius: 10px;
+}
+
+.containerMessage {
+    overflow: scroll;
+    padding: 0.5rem;
+}
+
+.containerMessage::-webkit-scrollbar {
+    display: none;
+}
+
+.chatIconContainer {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
+    box-shadow: 0 0 10px 2px rgb(153, 153, 153);
+}
+
+.chatIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.closeIcon {
+    position: absolute;
+    right: 0.5rem;
+    top: 0rem;
+    cursor: pointer;
 }
