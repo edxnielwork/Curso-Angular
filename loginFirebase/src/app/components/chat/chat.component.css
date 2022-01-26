@@ -4,10 +4,53 @@
     position: fixed;
     right: 1rem;
     bottom: 1rem;
+    border-radius: 20px;
 }
 
 .card-header {
     background-color: rgb(255, 186, 58);
     color: black;
     font-weight: 700;
+    border-start-end-radius: 20px;
+    border-start-start-radius: 20px;
+}
+
+.card-body {
+    background-image: url('https://www.todofondos.net/wp-content/uploads/fondo-de-pantalla-de-whatsapp-descarga-gratuita-486x1024.jpg');
+}
+
+.form-control {
+    border-radius: 20px;
+}
+
+.input-group-text {
+    border-radius: 45%;
+}
+
+.imgEfectSend:active {
+    transform: scale(0.8);
+}
+
+.sended {
+    display: block;
+    float: right;
+    background-color: rgb(167, 167, 167);
+    color: black;
+    min-width: 50.01%;
+    text-align: right;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 10px;
+}
+
+.received {
+    display: block;
+    float: left;
+    background-color: #fdf0b5;
+    color: black;
+    min-width: 50.01%;
+    text-align: left;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 10px;
 }

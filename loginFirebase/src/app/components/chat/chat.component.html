@@ -1,18 +1,22 @@
-<div class="card text-center cardContainer">
+<div class="card text-center cardContainer" *ngIf="userLogged">
     <div class="card-header">
         Chat Edxniel Work
     </div>
     <div class="card-body">
-
-    </div>
-    <div class="card-footer text-muted">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Ingrese su mensaje">
-            <div class="input-group-append">
-                <span class="input-group-text  bg-dark" id="basic-addon2">
-                     <img src="https://cdn-icons-png.flaticon.com/512/561/561226.png" width="22" height="22">
-                </span>
-            </div>
+        <div>
+            <!--    <p *ngFor="let messeger of messegers" class="received">
+              {{messeger.texto}}
+            -->
+            <p *ngFor="let messeger of messegers" class="received" [ngClass]="(userLogged.uid==messeger.id)?'sended' : 'received'">
+            </p>
         </div>
     </div>
+    <form class=" card-footer text-muted input-group " (ngSubmit)="sendMessager() ">
+        <input type="text " class="form-control " placeholder="Ingrese su mensaje " [(ngModel)]="newMesseger " [ngModelOptions]="{standalone: true} ">
+        <div class="input-group-append " (click)="sendMessager() ">
+            <span class="input-group-text bg-dark " id="basic-addon2 ">
+                    <img class="imgEfectSend " src="https://cdn-icons-png.flaticon.com/512/561/561226.png " width="22 " height="22 " alt="send message ">
+            </span>
+        </div>
+    </form>
 </div>
