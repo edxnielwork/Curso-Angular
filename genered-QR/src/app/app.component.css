@@ -1,0 +1,29 @@
+.container-xl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fondoImg {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/fondo.jpg");
+}
+
+.aclass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(8px 8px 8px #666666);
+    opacity: .9;
+}
+
+.ngxqrcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

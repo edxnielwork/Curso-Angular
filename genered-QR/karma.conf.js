@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/login-firebase'),
+      dir: require('path').join(__dirname, './coverage/genered-qr'),
       subdir: '.',
       reporters: [
         { type: 'html' },

@@ -1,0 +1,22 @@
+<div class="container-xl">
+    <div class="card text-center ">
+        <div class="card-header ">
+            <b>GENERADOR DE CODIGO FUTURO LAMANENSE</b>
+        </div>
+        <div class="card-body ">
+            <div class="ngxqrcode ">
+                <ngx-qrcode [elementType]=" elementType " [value]="url " cssClass="aclass " correctionLevel="L ">
+                </ngx-qrcode>
+
+
+            </div>
+            <div class="d-grid gap-2 ">
+                <input class="form-control " [(ngModel)]="value " type="text " placeholder="Ingresa la URL ">
+                <button class="btn btn-primary " type="button " (click)="mostrar() ">GENERAR QR</button>
+                <button class="btn btn-danger " type="button " (click)="clear() ">Limpiar</button>
+            </div>
+        </div>
+        <!-- <div class="card-footer text-muted ">            2 days ago      </div> -->
+
+    </div>
+</div>

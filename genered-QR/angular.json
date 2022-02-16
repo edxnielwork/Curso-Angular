@@ -3,33 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "loginFirebase": {
+    "genered-QR": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:component": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
-        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -41,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/login-firebase",
+            "outputPath": "dist/genered-qr",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,7 +27,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -93,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "loginFirebase:build:production"
+              "browserTarget": "genered-QR:build:production"
             },
             "development": {
-              "browserTarget": "loginFirebase:build:development"
+              "browserTarget": "genered-QR:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "loginFirebase:build"
+            "browserTarget": "genered-QR:build"
           }
         },
         "test": {
@@ -127,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "loginFirebase"
+  "defaultProject": "genered-QR"
 }
